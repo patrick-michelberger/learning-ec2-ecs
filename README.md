@@ -97,20 +97,20 @@ Take down cluster
 
 Tag the image to push to your repository. Update it with your AWS account id and aws ECR domain.
 
-`$ docker tag myrepo AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+`$ docker tag myimage AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myimage`
 
 Push the image.
 
-`$ docker push AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+`$ docker push AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myimage`
 
 5. Pull an image from Amazon ECR
 
-`$ docker pull AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+`$ docker pull AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myimage`
 
 
 6. Delete an image 
 
-`$ aws ecr batch-delete-image --repository-name myrepo --image-ids imageTag=myrepo`
+`$ aws ecr batch-delete-image --repository-name myrepo --image-ids imageTag=myimage`
 
 7. Delete repository 
 
