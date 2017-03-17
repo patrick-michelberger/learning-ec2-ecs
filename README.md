@@ -3,8 +3,21 @@ This repo is used to learn using the Amazon EC2 Container Service
 
 ## Setup AWS
 
-1. Install AWS Command line interface `$ pip install --upgrade --user awscli`
-2. Configure it with your credentials `$ aws configure`
+1. Install AWS Command line interface 
+
+`$ pip install --upgrade --user awscli`
+
+2. Configure it with your credentials 
+
+`$ aws configure`
+
+3. Install AWS ECS Command line interface
+
+`$ sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-darwin-amd64-latest`
+
+4. Apply execute permissions 
+
+`$ sudo chmod +x /usr/local/bin/ecs-cli`
 
 ## How to
 
