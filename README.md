@@ -110,7 +110,7 @@ Push the image.
 
 6. Delete an image 
 
-`$ aws ecr batch-delete-image --repository-name myrepo --image-ids imageTag=trusty`
+`$ aws ecr batch-delete-image --repository-name myrepo --image-ids imageTag=myrepo`
 
 7. Delete repository 
 
