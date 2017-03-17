@@ -77,3 +77,41 @@ Delete the service
 Take down cluster
 
 ```$ ecs-cli down --force```
+
+
+##  Amazon EC2 Container Registry
+
+1. Authenticate Docker to an Amazon ECR registry with get-login
+
+`$ aws ecr get-login`
+
+2. Copy and paste the docker login command into a terminal to authenticate your Docker CLI to the registry. 
+
+3. Create a repository 
+
+`$ aws ecr create-repository --repository-name myrepo`
+
+4. Push an image to Amazon ECR
+
+`$ docker images`
+
+Tag the image to push to your repository. Update it with your AWS account id and aws ECR domain.
+
+`$ docker tag myrepo AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+
+Push the image.
+
+`$ docker push AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+
+5. Pull an image from Amazon ECR
+
+`$ docker pull AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/myrepo`
+
+
+6. Delete an image 
+
+`$ aws ecr batch-delete-image --repository-name myrepo --image-ids imageTag=trusty`
+
+7. Delete repository 
+
+`$ aws ecr delete-repository --repository-name myrepo --force`
